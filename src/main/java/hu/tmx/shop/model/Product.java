@@ -9,5 +9,9 @@ public abstract class Product {
 
     private final String name;
 
+    public abstract double receivePrice();
+
+
+
 
 }
