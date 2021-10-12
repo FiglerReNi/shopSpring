@@ -12,5 +12,4 @@ public class ShopController {
         products.forEach(System.out::println);
     }
 
-
 }

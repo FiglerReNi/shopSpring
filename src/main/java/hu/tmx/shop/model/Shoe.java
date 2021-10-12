@@ -2,10 +2,8 @@ package hu.tmx.shop.model;
 
 import hu.tmx.shop.service.Refundable;
 import hu.tmx.shop.service.Sellable;
-import hu.tmx.shop.util.Round;
 import lombok.Getter;
 import lombok.Setter;
-
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 

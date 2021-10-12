@@ -22,7 +22,6 @@ public class Flower extends Product implements Sellable, Maintainable {
     private LocalDate maintainDate;
     private LocalDate sellDate;
 
-
     public Flower(String name, int age) {
         super(name);
         this.age = age;
