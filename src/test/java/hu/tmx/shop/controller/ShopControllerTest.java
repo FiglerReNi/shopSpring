@@ -43,5 +43,6 @@ class ShopControllerTest {
     public void tearDown(){
         flower = null;
         shoe = null;
+        System.setOut(standardOut);
     }
 }

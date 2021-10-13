@@ -52,7 +52,7 @@ class FlowerTest {
     @Test
     public void needMaintain(){
         assertEquals("Öntözés", flower.maintain());
-        assertEquals(LocalDate.of(2021,10,11), flower.getMaintainDate());
+        assertEquals(LocalDate.now(), flower.getMaintainDate());
     }
 
     @Test

@@ -36,7 +36,7 @@ class ShoeTest {
 
     @Test
     public void firstDayRefundablePrice(){
-        shoe.setSellDate(LocalDate.of(2021,10,11));
+        shoe.setSellDate(LocalDate.now());
         assertEquals(15000, shoe.receiveRefundablePrice());
     }
 
