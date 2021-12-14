@@ -22,12 +22,12 @@ public class ShopApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        shopController.displayPrice(List.of(
-                new Shoe(44, "Adidas"),
-                new Shoe(40.5, "Reebok"),
-                new Shoe(38, "Nike"),
-                new Flower("Liliom", 8),
-                new Flower("Jácint", 1)
-        ));
+//        shopController.displayPrice(List.of(
+//                new Shoe(44, "Adidas"),
+//                new Shoe(40.5, "Reebok"),
+//                new Shoe(38, "Nike"),
+//                new Flower("Liliom", 8),
+//                new Flower("Jácint", 1)
+//        ));
     }
 }
