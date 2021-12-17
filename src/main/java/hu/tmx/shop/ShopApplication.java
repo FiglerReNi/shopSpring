@@ -1,8 +1,8 @@
 package hu.tmx.shop;
 
-import hu.tmx.shop.controller.ShopController;
-import hu.tmx.shop.model.Flower;
-import hu.tmx.shop.model.Shoe;
+import hu.tmx.shop.shopmanager.ShopManager;
+import hu.tmx.shop.model.impl.Flower;
+import hu.tmx.shop.model.impl.Shoe;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -14,7 +14,7 @@ import java.util.List;
 public class ShopApplication implements CommandLineRunner {
 
     @Autowired
-    ShopController shopController;
+    ShopManager shopManager;
 
     public static void main(String[] args) {
         SpringApplication.run(ShopApplication.class, args);
@@ -22,12 +22,12 @@ public class ShopApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-//        shopController.displayPrice(List.of(
-//                new Shoe(44, "Adidas"),
-//                new Shoe(40.5, "Reebok"),
-//                new Shoe(38, "Nike"),
-//                new Flower("Liliom", 8),
-//                new Flower("Jácint", 1)
-//        ));
+        shopManager.displayPrice(List.of(
+                new Shoe(44, "Adidas"),
+                new Shoe(40.5, "Reebok"),
+                new Shoe(38, "Nike"),
+                new Flower("Liliom", 8),
+                new Flower("Jácint", 1)
+        ));
     }
 }

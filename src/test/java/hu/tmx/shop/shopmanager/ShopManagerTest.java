@@ -1,7 +1,7 @@
-package hu.tmx.shop.controller;
+package hu.tmx.shop.shopmanager;
 
-import hu.tmx.shop.model.Flower;
-import hu.tmx.shop.model.Shoe;
+import hu.tmx.shop.model.impl.Flower;
+import hu.tmx.shop.model.impl.Shoe;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -14,10 +14,10 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-class ShopControllerTest {
+class ShopManagerTest {
 
     @Autowired
-    ShopController shopController;
+    ShopManager shopManager;
 
     Flower flower;
     Shoe shoe;
@@ -34,7 +34,7 @@ class ShopControllerTest {
 
     @Test
     public void displayPriceIsCorrect(){
-        shopController.displayPrice(List.of(flower, shoe));
+        shopManager.displayPrice(List.of(flower, shoe));
         assertEquals("49 hónapos és 1 hetes Liliom - 1394"
                 + System.lineSeparator() + "44.0 méretű Adidas Cipő - 15000", outputStreamCaptor.toString().trim());
     }

@@ -1,5 +1,6 @@
 package hu.tmx.shop.model;
 
+import hu.tmx.shop.model.impl.Flower;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -33,7 +34,7 @@ class FlowerTest {
 
     @Test
     public void secondMaintainNeedIsTrue(){
-        flower.setMaintainDate(LocalDate.of(2018, 1, 1));
+        flower.setMaintainDate(LocalDate.now().minusYears(3));
         assertTrue(flower.isMaintained());
     }
 
@@ -45,7 +46,7 @@ class FlowerTest {
 
     @Test
     public void secondMaintainNeedIsFalse(){
-        flower.setMaintainDate(LocalDate.of(2020, 1, 1));
+        flower.setMaintainDate(LocalDate.now().minusYears(1));
         assertFalse(flower.isMaintained());
     }
 

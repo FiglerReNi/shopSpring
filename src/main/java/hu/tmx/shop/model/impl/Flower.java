@@ -1,7 +1,8 @@
-package hu.tmx.shop.model;
+package hu.tmx.shop.model.impl;
 
-import hu.tmx.shop.service.Maintainable;
-import hu.tmx.shop.service.Sellable;
+import hu.tmx.shop.model.Product;
+import hu.tmx.shop.model.Maintainable;
+import hu.tmx.shop.model.Sellable;
 import lombok.Getter;
 import lombok.Setter;
 

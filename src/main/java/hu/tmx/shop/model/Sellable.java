@@ -1,4 +1,4 @@
-package hu.tmx.shop.service;
+package hu.tmx.shop.model;
 
 public interface Sellable {
 

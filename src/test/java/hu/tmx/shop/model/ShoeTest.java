@@ -1,5 +1,6 @@
 package hu.tmx.shop.model;
 
+import hu.tmx.shop.model.impl.Shoe;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -19,7 +20,7 @@ class ShoeTest {
     @BeforeEach
     public void setUp(){
         shoe = new Shoe(44, "Adidas");
-        shoe.setSellDate(LocalDate.of(2021,10, 1));
+        shoe.setSellDate(LocalDate.now().minusDays(10));
         System.setOut(new PrintStream(outputStreamCaptor));
     }
 
@@ -42,13 +43,13 @@ class ShoeTest {
 
     @Test
     public void SecondDayRefundablePrice(){
-        shoe.setSellDate(LocalDate.of(2021,10,10));
+        shoe.setSellDate(LocalDate.now().minusDays(1));
         assertEquals(7500, shoe.receiveRefundablePrice());
     }
 
     @Test
     public void NoRefundablePrice(){
-        shoe.setSellDate(LocalDate.of(2021,1,1));
+        shoe.setSellDate(LocalDate.now().minusDays(51));
         assertEquals(0, shoe.receiveRefundablePrice());
     }
 
