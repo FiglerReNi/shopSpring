@@ -1,4 +1,4 @@
-package hu.tmx.shop;
+package hu.tmx.shopSpring;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

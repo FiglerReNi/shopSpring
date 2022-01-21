@@ -1,8 +1,8 @@
-package hu.tmx.shop;
+package hu.tmx.shopSpring;
 
-import hu.tmx.shop.shopmanager.ShopManager;
-import hu.tmx.shop.model.impl.Flower;
-import hu.tmx.shop.model.impl.Shoe;
+import hu.tmx.shopSpring.shopmanager.ShopManager;
+import hu.tmx.shopSpring.model.impl.Flower;
+import hu.tmx.shopSpring.model.impl.Shoes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -23,9 +23,9 @@ public class ShopApplication implements CommandLineRunner {
     @Override
     public void run(String... args) {
         shopManager.displayPrice(List.of(
-                new Shoe(44, "Adidas"),
-                new Shoe(40.5, "Reebok"),
-                new Shoe(38, "Nike"),
+                new Shoes("Adidas", 44),
+                new Shoes("Reebok", 40.5),
+                new Shoes("Nike", 38),
                 new Flower("Liliom", 8),
                 new Flower("Jácint", 1)
         ));

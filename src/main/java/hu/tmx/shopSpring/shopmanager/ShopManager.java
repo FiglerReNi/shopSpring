@@ -1,6 +1,6 @@
-package hu.tmx.shop.shopmanager;
+package hu.tmx.shopSpring.shopmanager;
 
-import hu.tmx.shop.model.Product;
+import hu.tmx.shopSpring.model.Product;
 import org.springframework.stereotype.Controller;
 
 import java.util.List;
