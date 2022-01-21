@@ -1,13 +1,12 @@
 package hu.tmx.shopSpring.model.impl;
 
 import hu.tmx.shopSpring.model.Product;
-import hu.tmx.shopSpring.model.Maintainable;;
+import hu.tmx.shopSpring.model.Maintainable;
 import java.time.temporal.ChronoUnit;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
-import java.time.Period;
 
 @Getter
 @Setter

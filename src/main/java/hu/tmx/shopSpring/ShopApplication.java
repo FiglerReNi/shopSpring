@@ -13,8 +13,13 @@ import java.util.List;
 @SpringBootApplication
 public class ShopApplication implements CommandLineRunner {
 
-    @Autowired
+
     ShopManager shopManager;
+
+    @Autowired
+    public void setShopManager(ShopManager shopManager) {
+        this.shopManager = shopManager;
+    }
 
     public static void main(String[] args) {
         SpringApplication.run(ShopApplication.class, args);
